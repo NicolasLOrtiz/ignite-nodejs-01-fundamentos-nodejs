@@ -1,0 +1,24 @@
+### Get all items
+GET http://localhost:3333/
+
+### Create a new item
+POST http://localhost:3333/
+Content-Type: application/json
+
+{
+  "name": "Sample Item",
+  "description": "This is a test item."
+}
+
+### Update an item
+PUT http://localhost:3333/1
+Content-Type: application/json
+
+{
+  "name": "Updated Item",
+  "description": "This item has been updated."
+}
+
+#### Delete an item
+#DELETE http://localhost:3333/1
+

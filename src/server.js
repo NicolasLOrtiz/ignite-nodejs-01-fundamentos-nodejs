@@ -1,5 +1,8 @@
+// Description: This file sets up an HTTP server that handles requests and routes them to the appropriate handlers based on the method and path.
+// It also includes middleware for parsing JSON request bodies and extracting query parameters.
+// We can use module imports because in package.json we set "type": "module"
+// and we are using Node.js version that supports ES modules.
 import http from 'node:http'
-
 import { json } from './middlewares/json.js'
 import { routes } from './routes.js'
 import { extractQueryParams } from './utils/extract-query-params.js'
@@ -27,4 +30,6 @@ const server = http.createServer(async (req, res) => {
   return res.writeHead(404).end()
 })
 
-server.listen(3333)
+server.listen(3333, () => {
+  console.log('HTTP Server running on http://localhost:3333')
+})
