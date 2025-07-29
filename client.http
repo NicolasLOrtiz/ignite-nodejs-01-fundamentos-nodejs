@@ -1,8 +1,8 @@
 ### Get all items
-GET http://localhost:3333/
+GET http://localhost:3333/users
 
 ### Create a new item
-POST http://localhost:3333/
+POST http://localhost:3333/users
 Content-Type: application/json
 
 {
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### Update an item
-PUT http://localhost:3333/1
+PUT http://localhost:3333/users/c9dbf386-b28c-4f7e-aadf-1930bee4d284
 Content-Type: application/json
 
 {
@@ -20,5 +20,5 @@ Content-Type: application/json
 }
 
 #### Delete an item
-DELETE http://localhost:3333/1
+DELETE http://localhost:3333/users/7a037236-9408-4674-8393-3e49554389bc
 
