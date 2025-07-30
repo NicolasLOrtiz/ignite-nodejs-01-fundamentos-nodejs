@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch src/server.js"
+    "start": "node --watch src/server.js",
+    "start:stream": "node --watch streams/stream-http-server.js"
   },
   "keywords": [],
   "author": "",
