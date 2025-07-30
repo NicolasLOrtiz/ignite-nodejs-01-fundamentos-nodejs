@@ -1,8 +1,13 @@
 import fs from 'node:fs/promises'
 
+// Importing the URL module to handle file paths
+// in a way that is compatible with both CommonJS and ESM
+// This is necessary for the database file path resolution
+// when using ES modules in Node.js. (package.json type: "module")
 const databasePath = new URL('../db.json', import.meta.url)
 
 export class Database {
+  // Private field to hold the database content
   #database = {}
 
   constructor() {

@@ -53,6 +53,12 @@ export const routes = [
       const { name, email } = req.body
 
       const user = {
+        // Generate a unique identifier for the user
+        // Using randomUUID from the crypto module
+        // This ensures that each user has a unique ID
+        // UUID (Universally Unique Identifier) is a 128-bit number used to uniquely identify
+        // information in computer systems.
+        // It is often represented as a string in the format xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
         id: randomUUID(),
         name,
         email,
