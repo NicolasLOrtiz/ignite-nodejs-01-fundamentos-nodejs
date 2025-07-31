@@ -21,7 +21,18 @@ const server = http.createServer(async (req, res) => {
 
     const { query, ...params } = routeParams.groups
 
+    // The params object contains the parameters extracted from the URL path.
+    // For example, if the URL is /users/123, params would be { id: '123' }.
+    // These parameters are often used to identify specific resources in the database
+    // or to perform actions on them.
     req.params = params
+
+    // Query parameters are often used to filter or sort data in a request.
+    // They are typically appended to the URL after a question mark (?)
+    // For example, in the URL /users?search=john, "search=john" is a query parameter.
+    // The extractQueryParams function is used to parse these parameters into
+    // an object for easier access in the route handler.
+    // URL Stateful => filter, sort, pagination
     req.query = query ? extractQueryParams(query) : {}
 
     return route.handler(req, res)
